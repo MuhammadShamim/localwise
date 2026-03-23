@@ -1,0 +1,114 @@
+LocalWise Text-Based File Processing Test
+==========================================
+
+This is a plain text file to test the new text-based file processing
+capabilities added to LocalWise v1.0.0.
+
+SUPPORTED FILE TYPES
+=====================
+
+LocalWise now supports processing the following text-based file formats:
+
+Document Types:
+- TXT (Plain Text) - This file type
+- RTF (Rich Text Format)
+- DOC/DOCX (Microsoft Word)
+
+Programming Languages:
+- Java (.java)
+- Python (.py)
+- SQL (.sql)  
+- JavaScript (.js)
+- TypeScript (.ts)
+- C/C++ (.c, .cpp, .h, .hpp)
+- C# (.cs)
+- Go (.go)
+- PHP (.php) 
+- Ruby (.rb)
+- Rust (.rs)
+- Kotlin (.kt)
+- Swift (.swift)
+- Scala (.scala)
+- Perl (.pl)
+
+Web Development:
+- HTML (.html)
+- CSS (.css)
+- SCSS (.scss)
+- Sass (.sass)
+- Less (.less)
+
+Documentation & Markup:
+- Markdown (.md, .markdown)
+- reStructuredText (.rst)
+- LaTeX (.tex)
+
+Scripts & Configuration:
+- Shell Scripts (.sh, .bash, .zsh)
+- PowerShell (.ps1)
+- R Scripts (.r, .R)
+- MATLAB (.m)
+- Lua (.lua)
+- Vim Scripts (.vim)
+
+HOW IT WORKS
+============
+
+1. File Detection
+   LocalWise scans the documents/ folder recursively for all supported file types.
+   It uses glob patterns to match file extensions.
+
+2. Text Extraction
+   For plain text files like this one, the content is read directly.
+   Multiple text encodings are tried (UTF-8, Latin-1, CP1252, etc.) to
+   ensure compatibility with different file sources.
+
+3. Content Processing
+   The extracted text is split into chunks using LangChain's
+   RecursiveCharacterTextSplitter for optimal AI processing.
+
+4. Vector Embeddings
+   Text chunks are converted to vector embeddings using Ollama
+   for semantic search capabilities.
+
+BENEFITS
+========
+
+Privacy: All processing happens locally, no data leaves your computer
+Speed: Direct text file processing is very fast
+Flexibility: Works with any text-based file format
+Compatibility: Handles different text encodings automatically
+Scale: Can process thousands of text files efficiently
+
+TESTING NOTES
+=============
+
+This plain text file should be processed successfully by LocalWise.
+The content should be:
+- Split into appropriate chunks
+- Made searchable through the AI interface
+- Retain its original structure and information
+
+This file serves as a test case for:
+✓ Plain text file recognition (.txt extension)
+✓ Multi-encoding text reading
+✓ Large text block processing
+✓ Special character handling
+✓ File size validation
+✓ Error handling and logging
+
+SAMPLE QUERIES TO TRY
+=====================
+
+After processing, you could ask LocalWise:
+- "What file types does LocalWise support?"
+- "How does text extraction work?"
+- "What are the benefits of local processing?"
+- "What programming languages are supported?"
+- "How does file detection work?"
+
+---
+Generated for LocalWise v1.0.0 Text Processing Test
+Date: 2024
+File Type: Plain Text (.txt)
+Purpose: Testing text-based file processing capabilities

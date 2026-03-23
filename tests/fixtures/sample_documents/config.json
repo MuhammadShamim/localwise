@@ -1,0 +1,31 @@
+{
+  "application": {
+    "name": "Sample Application",
+    "version": "1.0.0",
+    "debug": false
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "name": "sample_db",
+    "credentials": {
+      "username": "user",
+      "password": "password"
+    }
+  },
+  "features": {
+    "authentication": true,
+    "logging": true,
+    "caching": false
+  },
+  "settings": {
+    "max_file_size": "10MB",
+    "allowed_formats": [
+      "pdf",
+      "docx",
+      "txt",
+      "md"
+    ],
+    "timeout": 30
+  }
+}

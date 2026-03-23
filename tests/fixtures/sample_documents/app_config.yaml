@@ -1,0 +1,47 @@
+# Application Configuration
+application:
+  name: Sample YAML App
+  version: 1.0.0
+  environment: production
+
+server:
+  host: 0.0.0.0
+  port: 8080
+  ssl: false
+
+database:
+  type: postgresql
+  connection:
+    host: localhost
+    port: 5432
+    database: yamlapp
+    pool_size: 10
+
+logging:
+  level: info
+  format: json
+  outputs:
+    - console
+    - file
+
+features:
+  authentication:
+    enabled: true
+    provider: oauth2
+  caching:
+    enabled: true
+    type: redis
+    ttl: 3600
+  monitoring:
+    enabled: true
+    endpoint: /metrics
+
+security:
+  cors:
+    enabled: true
+    origins:
+      - https://app.example.com
+      - https://api.example.com
+  rate_limiting:
+    enabled: true
+    requests_per_minute: 100

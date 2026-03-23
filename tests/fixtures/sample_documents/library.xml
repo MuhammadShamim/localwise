@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <metadata>
+        <name>Sample Library</name>
+        <version>1.0</version>
+        <created>2024-01-15</created>
+        <description>A sample XML document for testing</description>
+    </metadata>
+    
+    <books>
+        <book id="book1" genre="fiction">
+            <title>The Great Adventure</title>
+            <author>
+                <first_name>John</first_name>
+                <last_name>Author</last_name>
+            </author>
+            <publication>
+                <year>2023</year>
+                <publisher>Sample Publishing</publisher>
+                <isbn>978-1234567890</isbn>
+            </publication>
+            <description>
+                An exciting tale of adventure and discovery in uncharted territories.
+            </description>
+        </book>
+        
+        <book id="book2" genre="technology">
+            <title>Modern Software Development</title>
+            <author>
+                <first_name>Jane</first_name>
+                <last_name>Developer</last_name>
+            </author>
+            <publication>
+                <year>2023</year>
+                <publisher>Tech Books Inc</publisher>
+                <isbn>978-9876543210</isbn>
+            </publication>
+            <description>
+                A comprehensive guide to modern software development practices and methodologies.
+            </description>
+        </book>
+        
+        <book id="book3" genre="science">
+            <title>Quantum Computing Basics</title>
+            <author>
+                <first_name>Dr. Alice</first_name>
+                <last_name>Scientist</last_name>
+            </author>
+            <publication>
+                <year>2023</year>
+                <publisher>Science Press</publisher>
+                <isbn>978-1122334455</isbn>
+            </publication>
+            <description>
+                An introduction to the fascinating world of quantum computing and its applications.
+            </description>
+        </book>
+    </books>
+    
+    <categories>
+        <category name="fiction">
+            <description>Fictional literature and stories</description>
+            <book_count>1</book_count>
+        </category>
+        <category name="technology">
+            <description>Technology and programming books</description>
+            <book_count>1</book_count>
+        </category>
+        <category name="science">
+            <description>Scientific and research publications</description>
+            <book_count>1</book_count>
+        </category>
+    </categories>
+</library>

@@ -1,0 +1,11 @@
+id,name,email,department,salary,join_date
+1,John Doe,john.doe@company.com,Engineering,75000,2023-01-15
+2,Jane Smith,jane.smith@company.com,Marketing,65000,2023-02-01
+3,Bob Johnson,bob.johnson@company.com,Sales,70000,2023-01-20
+4,Alice Brown,alice.brown@company.com,Engineering,80000,2022-12-10
+5,Charlie Wilson,charlie.wilson@company.com,HR,60000,2023-03-01
+6,Diana Davis,diana.davis@company.com,Finance,72000,2023-01-30
+7,Frank Miller,frank.miller@company.com,Engineering,78000,2022-11-15
+8,Grace Lee,grace.lee@company.com,Marketing,68000,2023-02-15
+9,Henry Taylor,henry.taylor@company.com,Operations,64000,2023-01-05
+10,Ivy Chen,ivy.chen@company.com,Engineering,82000,2022-10-20

@@ -1,0 +1,52 @@
+# ================================
+# LocalWise - Project Dependencies 
+# ================================
+# 
+# 🧠 LocalWise: Your Personal AI Knowledge Assistant
+# Developed by: Akhtar Shamim (WWEX Group)
+# Repository: https://github.com/akhtar-shamim_WWEXTest/localwise
+# Version: 1.0.0
+#
+# Installation: pip install -r requirements.txt
+# ================================
+
+# Core LangChain components (Updated to latest versions)
+langchain>=0.3.0
+langchain-community>=0.3.0
+langchain-ollama>=0.2.0
+langchain-text-splitters>=0.3.0
+
+# Vector database
+chromadb>=0.5.0
+
+# Document processing
+pdfplumber>=0.11.0
+pandas>=2.2.0
+PyYAML>=6.0.1              # YAML file parsing
+# Note: JSON and XML parsing use Python standard library
+
+# Optional: Enhanced document format support
+# Uncomment the lines below if you need these file types:
+# docx2txt>=0.8              # Microsoft Word documents (.doc, .docx)
+# striprtf>=0.0.26           # RTF (Rich Text Format) files
+# python-docx>=1.1.0         # Alternative for .docx files (more features)
+
+# Note: Text-based files (.txt, .py, .java, .sql, .js, .ts, .cpp, .c, .cs, .go, 
+# .php, .rb, .rs, .kt, .swift, .scala, .pl, .sh, .ps1, .r, .m, .lua, .vim, 
+# .md, .rst, .tex, .html, .css, .scss, .sass, .less) are supported natively
+
+# Embeddings and text processing
+sentence-transformers>=3.0.0
+
+# Web interface 
+streamlit>=1.40.0
+
+# HTTP requests for Ollama validation
+requests>=2.32.0
+
+# Performance and compatibility
+numpy>=1.26.0
+typing-extensions>=4.9.0   # For older Python versions compatibility
+
+# Development and debugging
+python-dotenv>=1.0.0       # For environment variable management

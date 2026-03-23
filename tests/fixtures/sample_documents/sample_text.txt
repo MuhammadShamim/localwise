@@ -1,0 +1,60 @@
+Sample Text Document for Testing
+
+This is a plain text document that contains various types of content
+for testing the LocalWise knowledge assistant system.
+
+INTRODUCTION
+============
+
+LocalWise is an AI-powered knowledge assistant that can process
+and understand various types of documents. This sample text file
+demonstrates how plain text content is handled by the system.
+
+KEY FEATURES
+============
+
+1. Document Processing
+   - Supports multiple file formats
+   - Extracts meaningful content
+   - Creates searchable knowledge base
+
+2. AI Integration
+   - Uses local language models
+   - No external API dependencies
+   - Maintains data privacy
+
+3. Query Capabilities
+   - Natural language questions
+   - Context-aware responses
+   - Source attribution
+
+TECHNICAL DETAILS
+=================
+
+The system utilizes vector embeddings to create semantic
+representations of document content. This allows for:
+
+- Similarity-based retrieval
+- Context-aware question answering
+- Semantic search capabilities
+
+USAGE EXAMPLES
+==============
+
+Users can ask questions like:
+- "What are the key features of LocalWise?"
+- "How does the AI integration work?"
+- "What file formats are supported?"
+
+The system will search through processed documents
+and provide relevant answers with source citations.
+
+CONCLUSION
+==========
+
+This sample document demonstrates the variety of content
+that can be processed and made searchable through the
+LocalWise knowledge assistant system.
+
+For more information, see the documentation and examples
+provided with the system.
