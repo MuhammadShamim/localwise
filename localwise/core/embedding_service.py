@@ -33,7 +33,7 @@ from langchain_community.vectorstores import Chroma
 from langchain_ollama import OllamaEmbeddings
 
 from ..data.data_manager import DataManager
-import config
+from localwise import config
 
 
 class EmbeddingService:

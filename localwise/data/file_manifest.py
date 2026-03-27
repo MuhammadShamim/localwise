@@ -35,7 +35,7 @@ from typing import Dict, Any, Optional, List, Tuple, Set
 from datetime import datetime
 from pathlib import Path
 
-import config
+from localwise import config
 
 
 class FileManifest:

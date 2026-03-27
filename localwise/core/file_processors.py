@@ -3,7 +3,7 @@ LocalWise Core File Processors Module
 
 This module contains the complete file processing system for LocalWise, including:
 - Base FileProcessor class for extensible file handling
-- Specialized processors for 40+ file types  
+- Specialized processors for 40+ file types (including XML family and DataWeave)
 - FileProcessorRegistry for organized processor management
 - Support for documents, source code, data files, and more
 
@@ -14,7 +14,7 @@ Architecture:
 
 Supported File Types:
 - Documents: PDF, DOC/DOCX, RTF, TXT, Markdown
-- Data: CSV, JSON, YAML, XML  
+- Data: CSV, JSON, YAML, XML, DataWeave
 - Source Code: 25+ programming languages
 - Web: HTML, CSS, SCSS, JavaScript, TypeScript
 - Configuration: YAML, JSON, XML, INI
@@ -455,6 +455,77 @@ class XMLProcessor(FileProcessor):
             return None
 
 
+class DataWeaveProcessor(FileProcessor):
+    """
+    Processor for MuleSoft DataWeave transformation scripts.
+
+    Parses DataWeave files (.dwl, .dw) and extracts header directives,
+    input/output type declarations, and transformation body content.
+    """
+
+    def process_single_file(self, file_path: str, logger) -> Optional[Dict[str, Any]]:
+        """
+        Parse a DataWeave script and extract structured content.
+
+        Returns:
+            Document object with header metadata and transformation body
+        """
+        encodings = ["utf-8", "utf-8-sig", "latin-1", "cp1252"]
+        content = None
+        for enc in encodings:
+            try:
+                with open(file_path, "r", encoding=enc) as f:
+                    content = f.read()
+                break
+            except (UnicodeDecodeError, LookupError):
+                continue
+
+        if content is None:
+            logger.error(f"Could not decode DataWeave file {file_path}")
+            return None
+
+        if not content.strip():
+            logger.warning(f"Empty DataWeave file: {file_path}")
+            return None
+
+        # Split header directives from the transformation body (separated by ---)
+        parts = content.split("---", 1)
+        header = parts[0].strip() if len(parts) > 1 else ""
+        body = parts[1].strip() if len(parts) > 1 else content.strip()
+
+        # Extract key directives from the header
+        output_type = None
+        input_types = []
+        var_declarations = []
+        for line in header.splitlines():
+            line = line.strip()
+            if line.startswith("output "):
+                output_type = line[len("output "):].strip()
+            elif line.startswith("input "):
+                input_types.append(line[len("input "):].strip())
+            elif line.startswith("var "):
+                var_declarations.append(line[len("var "):].strip())
+
+        sections = []
+        if header:
+            sections.append(f"[Header Directives]\n{header}")
+        if body:
+            sections.append(f"[Transformation Body]\n{body}")
+        text = "\n\n".join(sections) if sections else content
+
+        result = {
+            "text": text,
+            "source": file_path,
+            "type": "dataweave",
+            "output_type": output_type,
+        }
+        if input_types:
+            result["input_types"] = input_types
+        if var_declarations:
+            result["var_declarations"] = var_declarations
+        return result
+
+
 class OfficeProcessor(FileProcessor):
     """
     Processor for Microsoft Office documents.
@@ -570,7 +641,8 @@ class FileProcessorRegistry:
             CSVProcessor("csv", [".csv"], "Comma-separated value data files"),
             JSONProcessor("json", [".json"], "JSON data and configuration files"),
             YAMLProcessor("yaml", [".yml", ".yaml"], "YAML configuration and data files"),
-            XMLProcessor("xml", [".xml"], "XML structure and data files"),
+            XMLProcessor("xml", [".xml", ".xsd", ".xsl", ".xslt", ".wsdl", ".plist"], "XML structure, schema, transform, and service descriptor files"),
+            DataWeaveProcessor("dataweave", [".dwl", ".dw"], "MuleSoft DataWeave transformation scripts"),
             
             # === OFFICE DOCUMENTS ===
             OfficeProcessor("office", [".doc", ".docx"], "Microsoft Word documents"),

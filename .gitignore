@@ -1,0 +1,158 @@
+# =============================================================================
+# LocalWise .gitignore
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Python
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Distribution / packaging
+.eggs/
+*.egg
+*.egg-info/
+dist/
+build/
+wheels/
+sdist/
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.env/
+
+# Installer caches
+pip-log.txt
+pip-delete-this-directory.txt
+.pip/
+
+# Unit test / coverage
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+coverage.xml
+*.cover
+*.py,cover
+htmlcov/
+.pytest_cache/
+pytest_cache/
+nosetests.xml
+test-results/
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+.pyre/
+
+# Profiling
+*.prof
+
+# -----------------------------------------------------------------------------
+# LocalWise runtime data (generated, not source)
+# -----------------------------------------------------------------------------
+
+# Processed document chunks (rebuilt by ingest.py --step1)
+db/processed_chunks.json
+
+# ChromaDB vector store (rebuilt by ingest.py --step2)
+my_vectordb/
+
+# Application logs
+*.log
+localwise.log
+
+# Temporary processing files
+*.tmp
+*.temp
+
+# -----------------------------------------------------------------------------
+# Documents folder — keep the folder, ignore user content
+# Committed sample/fixture documents in tests/fixtures/ are NOT ignored.
+# -----------------------------------------------------------------------------
+documents/*
+!documents/.gitkeep
+
+# -----------------------------------------------------------------------------
+# Environment and secrets
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.secret
+secrets/
+credentials/
+
+# -----------------------------------------------------------------------------
+# IDE and editor files
+# -----------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# JetBrains
+*.iml
+*.iws
+*.ipr
+.idea/
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+Session.vim
+.netrwhist
+
+# -----------------------------------------------------------------------------
+# OS generated files
+# -----------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# -----------------------------------------------------------------------------
+# Build / packaging artifacts
+# -----------------------------------------------------------------------------
+*.so
+*.dylib
+*.dll
+
+# Sphinx docs build output
+docs/_build/
+docs/_autosummary/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# -----------------------------------------------------------------------------
+# Streamlit
+# -----------------------------------------------------------------------------
+.streamlit/secrets.toml
+
+# -----------------------------------------------------------------------------
+# Ollama / model files (large binaries — pulled locally via ollama pull)
+# -----------------------------------------------------------------------------
+models/
+*.gguf
+*.bin
+*.onnx
+db/chroma.sqlite3
