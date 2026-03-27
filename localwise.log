@@ -4,3 +4,71 @@
 2026-02-18 17:58:13,961 - LocalWise - INFO - Starting LocalWise document processing...
 2026-02-18 17:59:01,957 - LocalWise - INFO - LocalWise logging system initialized
 2026-02-18 17:59:01,957 - LocalWise - INFO - Starting LocalWise document processing...
+2026-03-26 22:26:08,578 - LocalWise - INFO - LocalWise logging system initialized
+2026-03-26 22:26:08,578 - LocalWise - INFO - Starting LocalWise document processing...
+2026-03-26 22:26:08,579 - LocalWise - INFO - Starting incremental document processing...
+2026-03-26 22:26:08,579 - LocalWise - INFO - 🔍 Detecting file changes for incremental processing...
+2026-03-26 22:26:08,581 - LocalWise - INFO - 📊 File change detection complete:
+2026-03-26 22:26:08,581 - LocalWise - INFO -    📄 New files: 0
+2026-03-26 22:26:08,581 - LocalWise - INFO -    🔄 Modified files: 0
+2026-03-26 22:26:08,581 - LocalWise - INFO -    🗑️  Deleted files: 0
+2026-03-26 22:26:08,581 - LocalWise - INFO -    📈 Total changes: 0
+2026-03-26 22:26:08,581 - LocalWise - INFO -    🎯 Files to process: 0
+2026-03-26 22:26:08,581 - LocalWise - INFO - ✅ No changes detected - all files are up to date
+2026-03-26 22:26:08,581 - LocalWise - INFO - No new or modified files found
+2026-03-26 22:26:08,581 - LocalWise - WARNING - No supported files found in 'documents/'
+2026-03-26 22:26:51,912 - LocalWise - INFO - LocalWise logging system initialized
+2026-03-26 22:26:51,912 - LocalWise - INFO - Starting LocalWise document processing...
+2026-03-26 22:26:51,913 - LocalWise - INFO - Starting incremental document processing...
+2026-03-26 22:26:51,913 - LocalWise - INFO - 🔍 Detecting file changes for incremental processing...
+2026-03-26 22:26:51,915 - LocalWise - INFO - 🔄 Force refresh mode: processing all files
+2026-03-26 22:26:51,915 - LocalWise - INFO - 📊 File change detection complete:
+2026-03-26 22:26:51,915 - LocalWise - INFO -    📄 New files: 0
+2026-03-26 22:26:51,915 - LocalWise - INFO -    🔄 Modified files: 0
+2026-03-26 22:26:51,915 - LocalWise - INFO -    🗑️  Deleted files: 0
+2026-03-26 22:26:51,915 - LocalWise - INFO -    📈 Total changes: 0
+2026-03-26 22:26:51,915 - LocalWise - INFO -    🎯 Files to process: 0
+2026-03-26 22:26:51,915 - LocalWise - INFO - ✅ No changes detected - all files are up to date
+2026-03-26 22:26:51,915 - LocalWise - INFO - No new or modified files found
+2026-03-26 22:26:51,915 - LocalWise - WARNING - No supported files found in 'documents/'
+2026-03-26 22:27:43,079 - LocalWise - INFO - LocalWise logging system initialized
+2026-03-26 22:27:43,079 - LocalWise - INFO - Starting LocalWise document processing...
+2026-03-26 22:27:43,079 - LocalWise - INFO - Loading files from 'documents/'...
+2026-03-26 22:27:43,079 - LocalWise - INFO - Scanning folder: documents
+2026-03-26 22:27:43,080 - LocalWise - INFO - Found 1 TXT files
+2026-03-26 22:27:43,080 - LocalWise - INFO - Processing TXT: plain_text_test.txt
+2026-03-26 22:27:43,080 - LocalWise - INFO - Found 1 MARKDOWN files
+2026-03-26 22:27:43,080 - LocalWise - INFO - Processing MARKDOWN: TEXT_PROCESSING_TEST.md
+2026-03-26 22:27:43,081 - LocalWise - INFO - Found 1 PYTHON files
+2026-03-26 22:27:43,081 - LocalWise - INFO - Processing PYTHON: test_python_processing.py
+2026-03-26 22:27:43,081 - LocalWise - INFO - Found 1 JAVA files
+2026-03-26 22:27:43,081 - LocalWise - INFO - Processing JAVA: LocalWiseTest.java
+2026-03-26 22:27:43,082 - LocalWise - INFO - Found 1 SQL files
+2026-03-26 22:27:43,082 - LocalWise - INFO - Processing SQL: localwise_test_queries.sql
+2026-03-26 22:27:43,083 - LocalWise - INFO - Processing summary:
+2026-03-26 22:27:43,083 - LocalWise - INFO -   java: 1 documents
+2026-03-26 22:27:43,083 - LocalWise - INFO -   markdown: 1 documents
+2026-03-26 22:27:43,083 - LocalWise - INFO -   python: 1 documents
+2026-03-26 22:27:43,083 - LocalWise - INFO -   sql: 1 documents
+2026-03-26 22:27:43,083 - LocalWise - INFO -   txt: 1 documents
+2026-03-26 22:27:43,083 - LocalWise - INFO - Total: 5 documents from 5 file types
+2026-03-26 22:27:43,083 - LocalWise - INFO - Loaded 5 document pages/rows
+2026-03-26 22:27:43,083 - LocalWise - INFO - Splitting text into chunks...
+2026-03-26 22:27:43,083 - LocalWise - INFO - Created 43 chunks total
+2026-03-26 22:27:43,083 - LocalWise - INFO - Full processing completed: Saved 43 chunks
+2026-03-26 22:28:04,451 - LocalWise - INFO - LocalWise logging system initialized
+2026-03-26 22:28:04,451 - LocalWise - INFO - Starting LocalWise document processing...
+2026-03-26 22:28:04,452 - LocalWise - INFO - === Step 2: Creating Embeddings ===
+2026-03-26 22:28:04,452 - LocalWise - INFO - Successfully loaded 43 chunks from processed data
+2026-03-26 22:28:04,452 - LocalWise - INFO - Loaded 43 text chunks from processed data
+2026-03-26 22:28:04,457 - LocalWise - INFO - Ollama connection validated successfully
+2026-03-26 22:28:04,457 - LocalWise - INFO - Creating embeddings with Ollama model: llama3:latest
+2026-03-26 22:28:04,457 - LocalWise - INFO - Processing 1 batches
+2026-03-26 22:28:33,845 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-26 22:28:33,893 - LocalWise - INFO - Created vector database at db
+2026-03-26 22:28:33,895 - LocalWise - INFO - Successfully created embeddings for 43 text chunks
+2026-03-26 22:28:33,895 - LocalWise - INFO - Vector database saved to: db
+2026-03-26 22:28:47,946 - LocalWise - INFO - LocalWise logging system initialized
+2026-03-26 22:28:47,947 - LocalWise - INFO - Starting LocalWise document processing...
+2026-03-26 22:39:47,488 - LocalWise - INFO - LocalWise logging system initialized
+2026-03-26 22:39:47,488 - LocalWise - INFO - Starting LocalWise document processing...

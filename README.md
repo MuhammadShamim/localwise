@@ -1,4 +1,4 @@
-# 🧠 LocalWise v1.0.0
+# 🧠 LocalWise v1.1.0
 
 **Your Professional AI Knowledge Assistant**
 
@@ -20,7 +20,7 @@ LocalWise is a professional-grade AI knowledge assistant with enterprise archite
 
 **📋 40+ Supported File Types:**
 - 📄 **Documents**: PDF, TXT, RTF, DOC, DOCX, ODT, EPUB
-- 📊 **Data**: CSV, TSV, JSON, JSONL, YAML, XML
+- 📊 **Data**: CSV, TSV, JSON, JSONL, YAML, XML, XSD, XSL/XSLT, WSDL, PLIST, DataWeave (DWL, DW)
 - 🔧 **Code**: Python, JavaScript, TypeScript, Java, C/C++, C#, Go, PHP, Ruby, Rust, Kotlin, Swift, Scala, Perl, SQL, Shell scripts (bash, sh, zsh), PowerShell, R, MATLAB, Lua
 - 📝 **Markup**: HTML, CSS, SCSS, Sass, Less, Markdown, reStructuredText, LaTeX
 - 🏢 **Office**: XLSX, PPTX, ODP, ODS
@@ -309,7 +309,9 @@ status = localwise.check_installation()
 | Category | Formats | Processor | Features |
 |----------|---------|-----------|----------|
 | **Documents** | PDF, DOCX, ODT, RTF, EPUB | Advanced text extraction | Metadata, structure preservation |
-| **Data** | CSV, TSV, JSON, JSONL, XML, YAML | Smart parsing | Schema detection, nested structures |
+| **Data** | CSV, TSV, JSON, JSONL, YAML | Smart parsing | Schema detection, nested structures |
+| **XML Family** | XML, XSD, XSL, XSLT, WSDL, PLIST | Recursive XML parser | Attribute preservation, namespace detection |
+| **DataWeave** | DWL, DW | DataWeave parser | Header directives, output/input type extraction |
 | **Code** | 25+ languages | Syntax-aware | Comment extraction, structure analysis |
 | **Office** | XLSX, PPTX, ODP, ODS | Native support | Multi-sheet, presentation content |
 | **Markup** | HTML, CSS, MD, LaTeX | Structured parsing | Link preservation, formatting |
@@ -385,7 +387,20 @@ db_status = config.validate_database_exists()
 
 ---
 
-## 🎉 What's New in v1.0.0
+## 🎉 What's New in v1.1.0
+
+### 🗂️ **Extended XML Support**
+- **XMLProcessor** now handles the full XML family: `.xsd`, `.xsl`, `.xslt`, `.wsdl`, `.plist` in addition to `.xml`
+- Recursive parser preserves element hierarchy, attributes, and namespace information across all XML-based formats
+
+### 🔄 **DataWeave Support**
+- New **DataWeaveProcessor** for MuleSoft DataWeave scripts (`.dwl`, `.dw`)
+- Splits and labels header directives and transformation body for better searchability
+- Extracts `output`, `input`, and `var` directive metadata into queryable fields
+
+---
+
+## ✨ What Was New in v1.0.0
 
 ### 🏗️ **Professional Architecture**
 - **Modular Package Structure**: Clean separation with localwise.core, localwise.data, localwise.ui, localwise.cli
@@ -437,10 +452,10 @@ pip install localwise
 
 ## 📝 License & Credits
 
-**License**: MIT  
-**Author**: LocalWise Development Team  
-**Version**: 1.0.0  
-**Release Date**: December 21, 2024
+**License**: MIT
+**Author**: LocalWise Development Team
+**Version**: 1.1.0
+**Release Date**: March 26, 2026
 
 **Technology Stack**:
 - **Core**: Python 3.8+ with comprehensive type hints
@@ -467,4 +482,4 @@ pip install localwise
 - **Training**: Available for team onboarding and best practices
 - **Integration**: Custom development for specialized use cases
 
-**Transform your documents into intelligent knowledge with LocalWise v1.0.0!** 🧠✨
+**Transform your documents into intelligent knowledge with LocalWise v1.1.0!** 🧠✨

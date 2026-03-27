@@ -1,6 +1,30 @@
-# LocalWise v1.0.0 - Changelog
+# LocalWise Changelog
 
 All notable changes to this project will be documented in this file.
+
+## [1.1.0] - 2026-03-26
+
+### ✨ **Extended File Format Support**
+
+#### 🗂️ **XML Family Support**
+- **Extended XMLProcessor** to handle XML-adjacent formats in addition to `.xml`:
+  - `.xsd` — XML Schema Definition files
+  - `.xsl` / `.xslt` — XSLT transformation stylesheets
+  - `.wsdl` — Web Services Description Language descriptors
+  - `.plist` — Apple Property List files
+- All new extensions reuse the existing recursive XML parser with attribute and namespace preservation
+
+#### 🔄 **DataWeave Support (New)**
+- **New `DataWeaveProcessor`** for MuleSoft DataWeave transformation scripts (`.dwl`, `.dw`)
+- Parses the DataWeave header/body structure split on the `---` separator
+- Extracts and surfaces structured metadata:
+  - `output_type` — declared output MIME type (e.g. `application/json`)
+  - `input_types` — list of declared input variable types
+  - `var_declarations` — top-level variable declarations
+- Multi-encoding support: UTF-8, UTF-8-sig, Latin-1, CP1252
+- Registered in `FileProcessorRegistry` under the `dataweave` type
+
+---
 
 ## [1.0.0] - 2024-12-21
 
