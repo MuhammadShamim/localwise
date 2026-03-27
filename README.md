@@ -89,12 +89,24 @@ documents/
 
 ### 4. **Process Documents**
 
-#### Option A: Quick Processing (Traditional)
+#### Option A: Full Pipeline (All Three Steps)
+```bash
+# Step 1: Extract text from documents and split into chunks
+python ingest.py --step1
+
+# Step 2: Generate vector embeddings and store in ChromaDB
+python ingest.py --step2
+
+# Step 3: Launch the Streamlit web interface
+python ingest.py --step3
+```
+
+#### Option B: Run Steps 1 & 2 Together (No UI Launch)
 ```bash
 python ingest.py --step1 && python ingest.py --step2
 ```
 
-#### Option B: Professional CLI Interface
+#### Option C: Professional CLI Interface
 ```bash
 # Process with comprehensive CLI
 python -m localwise.cli process -d documents/ --incremental
@@ -106,18 +118,27 @@ python -m localwise.cli status
 python -m localwise.cli list-files
 ```
 
-#### Option C: Incremental Processing (Recommended for Large Collections)
+#### Option D: Incremental Processing (Recommended for Large Collections)
 ```bash
-# Step 1: Extract text and detect changes
+# Step 1: Extract text — only new/modified files
 python ingest.py --step1 --incremental
 
 # Step 2: Create embeddings for new/modified files only
 python ingest.py --step2 --incremental
+
+# Step 3: Launch interface
+python ingest.py --step3
 ```
 
 ### 5. **Launch Interface**
 
-#### Web Interface
+#### Via ingest.py (Step 3)
+```bash
+python ingest.py --step3
+# Open: http://localhost:8501
+```
+
+#### Directly via Streamlit
 ```bash
 streamlit run app.py
 # Open: http://localhost:8501
@@ -267,6 +288,7 @@ embeddings = embedding_service.create_embeddings_from_texts(texts)
 # Only process new/modified files (recommended for large collections)
 python ingest.py --step1 --incremental
 python ingest.py --step2 --incremental
+python ingest.py --step3
 
 # Force refresh all files
 python ingest.py --step1 --force-refresh
