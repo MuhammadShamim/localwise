@@ -34,7 +34,7 @@ import streamlit as st
 import os
 from typing import Optional, Dict, Any, Tuple
 
-import config
+from localwise import config
 from ..data.data_manager import DataManager
 from ..core.embedding_service import EmbeddingService
 

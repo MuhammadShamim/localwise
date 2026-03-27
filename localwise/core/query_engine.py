@@ -31,10 +31,10 @@ Author: LocalWise Development Team
 import streamlit as st
 from typing import List, Dict, Any, Optional, Tuple
 from langchain_ollama import ChatOllama
-from langchain.schema import Document
+from langchain_core.documents import Document
 
 from .embedding_service import EmbeddingService
-import config
+from localwise import config
 
 
 class QueryEngine:

@@ -37,7 +37,7 @@ import shutil
 from typing import Optional, Dict, Any, List
 from pathlib import Path
 
-import config
+from localwise import config
 from ..data.data_manager import DataManager
 from ..data.file_manifest import FileManifest
 from ..core.embedding_service import EmbeddingService

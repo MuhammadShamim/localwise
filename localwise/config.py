@@ -33,7 +33,7 @@ from typing import Optional
 # ─────────────────────────────────────────────
 DOCS_FOLDER = "documents"     # Folder where your documents and files live
 DB_FOLDER = "db"        # Where the database will be saved
-OLLAMA_MODEL = "llama3.2:latest"        # Must match what you pulled with: ollama pull llama3.2
+OLLAMA_MODEL = "llama3:latest"          # Must match what you pulled with: ollama pull llama3
 OLLAMA_BASE_URL = "http://localhost:11434"  # Default Ollama endpoint
 CHUNK_SIZE = 500                 # How many characters per chunk
 CHUNK_OVERLAP = 50               # Overlap between chunks (helps with context)

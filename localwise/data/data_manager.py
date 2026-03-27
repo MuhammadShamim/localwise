@@ -33,7 +33,7 @@ import hashlib
 from typing import List, Dict, Any, Optional, Tuple
 from datetime import datetime
 
-import config
+from localwise import config
 
 
 class DataManager:
