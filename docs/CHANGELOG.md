@@ -77,14 +77,17 @@ ollama pull llama3.2:latest
 
 # 3. Add documents to docs/ folder
 
-# 4. Process documents (CLI or Python)
+# 4. Process documents
+python ingest.py --step1   # extract text & chunk
+python ingest.py --step2   # generate embeddings
+# OR via CLI
 python -m localwise.cli process -d docs/
-# OR
-python ingest.py --step1 && python ingest.py --step2
 
 # 5. Launch interface
+python ingest.py --step3   # launch via ingest
+# OR directly
 streamlit run app.py
-# OR
+# OR via CLI
 python -m localwise.cli serve
 ```
 
